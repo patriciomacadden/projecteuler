@@ -5,18 +5,7 @@
 ## What is the 10 001st prime number?
 ##
 
-class Numeric
-  def prime?
-    c, i = 0, 1
-
-    while i <= self && c < 3
-      c += 1 if self % i == 0
-      i += 1
-    end
-
-    c == 2
-  end
-end
+require './lib/numeric'
 
 prime = nil
 c, i = 0, 1
