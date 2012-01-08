@@ -1,4 +1,14 @@
 class Numeric
+  def divisors
+    d = []
+
+    (1..self).each do |n|
+      d << n if self % n == 0
+    end
+
+    d
+  end
+
   def palindrome?
     self.to_s == self.to_s.reverse
   end
@@ -12,6 +22,16 @@ class Numeric
     end
 
     c == 2
+  end
+
+  def triangle
+    t = 0
+
+    (1..self).each do |n|
+      t += n
+    end
+
+    t
   end
 end
 
